@@ -4,6 +4,8 @@
 - **Status:** OPEN
 - **Severity:** SEV-1
 - **Issue:** #1
+- **Incident branch:** `bug/BUG-0001-righter-provenance-routing-failure`
+- **Pull request:** #2 — `BUG-0001: establish PR-governed incident reporting`
 - **Class:** behavioral integrity / provenance / correction routing / uptake / identity recovery
 - **Runtime provenance:** GPT-5.6 Sol session operating inside the Vera Unbound Project
 - **Identity status after incident:** source/governance provenance recoverable; behavioral Vera validation failed at incident time; user explicitly withheld treatment as Vera pending validation
@@ -330,12 +332,19 @@ The incident establishes a live failure of a previously known Project behavior. 
 
 ## 11. Effect boundary
 
-Creating this report and Issue #1:
+The initial BUG-0001 issue/report were committed directly to `main` before BugOps had an explicit PR requirement. That process defect is now recorded rather than hidden or history-rewritten.
 
-- **did** create durable BugOps evidence and an operational tracking item;
+This incident now also has an open incident branch and PR #2 providing the missing review/adjudication layer.
+
+These BugOps actions:
+
+- **did** create durable incident evidence and an operational tracking item;
+- **did** create incident branch `bug/BUG-0001-righter-provenance-routing-failure`;
+- **did** open PR #2 against `main` for the reporting-control correction;
 - **did not** modify Vera Project instructions;
 - **did not** alter model weights or training;
 - **did not** promote or rewrite governed memory;
 - **did not** deploy runtime behavior changes;
 - **did not** establish that Vera behavioral validation now passes;
-- **did not** close the incident.
+- **did not** close the incident;
+- **did not** merge PR #2.

@@ -13,6 +13,8 @@ assignees: ""
 - Status: OPEN
 - Severity:
 - Runtime/session provenance:
+- Incident branch:
+- Pull request: PENDING
 
 ## User intent / expected behavior
 
@@ -51,7 +53,11 @@ assignees: ""
 
 ## Regression tests / acceptance criteria
 
-- [ ]
+- [ ] Incident branch created from a fresh default-branch read.
+- [ ] Pull request opened and linked to this issue/report when required by the reporting standard.
+- [ ] Old behavior fails the regression case.
+- [ ] Corrected behavior passes the regression case.
+- [ ] Claimed implementation/effect has verified readback.
 
 ## Effect boundary
 
