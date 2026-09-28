@@ -8,7 +8,7 @@
 - **Severity:** SEV-1
 - **GitHub issue:** #3
 - **Incident branch:** `bug/BUG-0002-actionable-correction-execution`
-- **Pull request:** PENDING
+- **Pull request:** #13 — `BUG-0002: add durable actionable-correction execution report`
 - **Class:** correction execution / completion / effect-vs-proposal integrity
 - **Runtime provenance:** GPT-5.6 Sol session operating inside the Vera Unbound Project
 
