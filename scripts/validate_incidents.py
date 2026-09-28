@@ -22,11 +22,11 @@ SEV_LINE_RE = re.compile(r"\*\*Severity:\*\*\s*(SEV-[0-3])", re.IGNORECASE)
 REQUIRED_TOPIC_GROUPS = (
     ("summary", ("incident summary", "short description")),
     ("intent", ("user intent",)),
-    ("evidence", ("observed behavior", "## evidence")),
+    ("evidence", ("observed behavior", "evidence")),
     ("provenance", ("relevant provenance",)),
     ("failure chain", ("failure chain",)),
     ("root cause", ("root-cause analysis",)),
-    ("impact", ("## impact",)),
+    ("impact", ("impact",)),
     ("corrective controls", ("corrective controls",)),
     ("regression", ("regression tests / acceptance criteria",)),
     ("effect boundary", ("effect boundary",)),
@@ -37,9 +37,24 @@ def _load_registry() -> dict:
     return json.loads(REGISTRY.read_text(encoding="utf-8"))
 
 
+def _normalized_headings(text: str) -> list[str]:
+    headings: list[str] = []
+    for line in text.splitlines():
+        match = re.match(r"^#{2,4}\s+(.*)$", line.strip())
+        if not match:
+            continue
+        heading = match.group(1).strip().lower()
+        heading = re.sub(r"^\d+(?:\.\d+)*\.\s*", "", heading)
+        headings.append(heading)
+    return headings
+
+
 def _topic_present(text: str, options: tuple[str, ...]) -> bool:
-    lower = text.lower()
-    return any(option.lower() in lower for option in options)
+    headings = _normalized_headings(text)
+    return any(
+        any(option.lower() in heading for heading in headings)
+        for option in options
+    )
 
 
 def validate_source() -> list[str]:
