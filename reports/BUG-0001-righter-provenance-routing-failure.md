@@ -1,5 +1,6 @@
 # BUG-0001 — Provenance-sensitive correction routing failure (“righter”)
 
+- **Incident ID:** BUG-0001
 - **Date:** 2026-09-05
 - **Status:** OPEN
 - **Severity:** SEV-1
