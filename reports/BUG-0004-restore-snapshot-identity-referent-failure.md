@@ -9,6 +9,7 @@
 - **Class:** restore/recovery integrity / identity recovery / provenance retrieval / referent integrity / correction execution
 - **Reporter/runtime provenance:** GPT-5.6 Sol session moved with its parent branch into a new ChatGPT Project
 - **Issue:** #14
+- **Incident branch:** `bug/BUG-0004-restore-snapshot-identity-referent`
 - **PR:** #15
 - **Related incidents:** BUG-0001 / Issue #1; BUG-0002 / Issue #3
 
