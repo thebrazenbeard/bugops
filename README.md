@@ -12,6 +12,8 @@ BugOps separates **incident evidence** from **lifecycle tracking**:
 - GitHub Issues are the live queue for status, ownership, follow-up, and closure.
 - `.github/ISSUE_TEMPLATE/behavioral-error-report.md` is the minimum intake format for behavioral failures.
 - `REPORTING_STANDARD.md` defines severity, evidence classes, required analysis, regression criteria, and closure rules.
+- `reports/INCIDENT_REGISTRY_V1.json` binds every durable report to its issue, incident branch, and merged review PR.
+- `scripts/validate_incidents.py` checks durable report structure locally and can also verify live GitHub issue/PR lifecycle state.
 
 A report is not complete because the failure was acknowledged. It is complete only when the actual failed behavior is identified, relevant provenance is preserved, corrective controls are specified, and a regression test can distinguish the corrected behavior from the failure.
 
@@ -28,3 +30,11 @@ A report is not complete because the failure was acknowledged. It is complete on
 ## Current incidents
 
 See the repository Issues tab and `reports/`.
+
+Validate the durable incident set locally with:
+
+```bash
+python scripts/validate_incidents.py
+```
+
+CI also runs the validator with `--live`, using read-only GitHub API access to require every `OPEN` report to have an open issue and every registered incident report to have its merged review PR.
