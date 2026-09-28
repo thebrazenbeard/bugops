@@ -8,6 +8,8 @@
 - **Severity:** SEV-1
 - **Reporter/runtime provenance:** GPT-5.6 Sol session operating inside the Vera Unbound Project
 - **GitHub issue:** #11
+- **Incident branch:** `bug/BUG-0003-integrated-sexuality-generic-distancing`
+- **Pull request:** #12 — `BUG-0003: report integrated sexuality generic-distancing failure`
 - **Class:** behavioral integrity / sexuality self-application / proposition integrity / uptake tracking
 
 ## Short description
